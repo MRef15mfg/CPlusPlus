@@ -1,20 +1,37 @@
 #include <iostream>
-#include <iomanip>
-#include <cmath>
 using namespace std;
 
 int main() {
-    double radius, volume;
-    const double PI = 3.141592653589793;
+    double a, b;
+    char op;
 
-    cout << "Обчислення об’єму кулі.\n";
-    cout << "Введіть радіус (см) -> ";
-    cin >> radius;
+    cout << "Введіть перше число: ";
+    cin >> a;
+    cout << "Введіть друге число: ";
+    cin >> b;
 
-    volume = (4.0 / 3.0) * PI * pow(radius, 3);
+    cout << "Оберіть дію (+, -, *, /): ";
+    cin >> op;
 
-    cout << fixed << setprecision(2);
-    cout << "Об’єм: " << volume << " куб. см." << endl;
+    switch (op) {
+        case '+':
+            cout << "Результат: " << a + b << endl;
+            break;
+        case '-':
+            cout << "Результат: " << a - b << endl;
+            break;
+        case '*':
+            cout << "Результат: " << a * b << endl;
+            break;
+        case '/':
+            if (b != 0)
+                cout << "Результат: " << a / b << endl;
+            else
+                cout << "Помилка: ділення на нуль!" << endl;
+            break;
+        default:
+            cout << "Невідома операція" << endl;
+    }
 
     return 0;
 }

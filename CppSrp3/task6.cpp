@@ -1,26 +1,15 @@
 #include <iostream>
-#include <iomanip>
 using namespace std;
 
 int main() {
-    double length, width, height, volume;
+    int num;
+    cout << "Введіть число: ";
+    cin >> num;
 
-    cout << "Обчислення об’єму паралелепіпеда.\n";
-    cout << "Введіть вихідні дані:\n";
-
-    cout << "Довжина (см) -> ";
-    cin >> length;
-
-    cout << "Ширина (см) -> ";
-    cin >> width;
-
-    cout << "Висота (см) -> ";
-    cin >> height;
-
-    volume = length * width * height;
-
-    cout << fixed << setprecision(2);
-    cout << "Об’єм: " << volume << " куб. см." << endl;
+    if (num % 2 == 0)
+        cout << "Результат: " << num * 3 << endl;
+    else
+        cout << "Результат: " << num / 2.0 << endl;
 
     return 0;
 }

@@ -2,14 +2,21 @@
 using namespace std;
 
 int main() {
-    int hryvnias, kopecks;
-    cout << "Введіть гривні та копійки через пробіл: ";
-    cin >> hryvnias >> kopecks;
+    int grade;
+    int sum = 0;
 
-    hryvnias = hryvnias + kopecks / 100;
-    kopecks = kopecks % 100;
+    for (int i = 1; i <= 5; i++) {
+        cout << "Введіть оцінку " << i << ": ";
+        cin >> grade;
+        sum += grade;
+    }
 
-    cout << "Сума: " << hryvnias << " грн " << kopecks << " коп" << endl;
+    double average = sum / 5.0;
+
+    if (average >= 4)
+        cout << "Студент допущений до іспиту" << endl;
+    else
+        cout << "Студент не допущений" << endl;
 
     return 0;
 }
