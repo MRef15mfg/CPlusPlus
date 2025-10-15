@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std;
 
 void b() {
@@ -169,7 +170,6 @@ void z() {
     
 }
 
-
 void k() {
     for (int i = 1; i <= 10; i++) {
         for (int j = i; j < 10; j++)
@@ -183,7 +183,6 @@ void k() {
         cout << endl;
     }
 }
-
 
 int main() {
     int choice;
@@ -203,9 +202,8 @@ int main() {
         cout << "-----------------------\n";
         cout << "Ваш вибір: ";
         cin >> choice;
-
         cout << endl;
-
+        
         switch (choice) {
             case 1: b(); break;
             case 2: u(); break;
@@ -220,10 +218,6 @@ int main() {
             case 0: cout << "Вихід з програми.\n"; break;
             default: cout << "Невірний вибір!\n"; break;
         }
-
         cout << endl;
-
     } while (choice != 0);
-
-
 }
