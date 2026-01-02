@@ -64,7 +64,7 @@ public:
             position.y += dy;
     }
 
-     int getWidth() const { return width; }
+    int getWidth() const { return width; }
     int getHeight() const { return height; }
 
     void setSymbol(char s) { symbol = s; }
