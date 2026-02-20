@@ -95,27 +95,27 @@ public:
 };
 
 int main() {
-    Time t1(1, 30, 45);
-    Time t2(5555);
+    Time startTime(1, 30, 45);
+    Time duration(5555);
 
-    cout << "t1 = ";
-    t1.print();
+    cout << "Start time = ";
+    startTime.print();
 
-    cout << "t2 = ";
-    t2.print();
+    cout << "Duration = ";
+    duration.print();
 
-    Time t3 = t1 + t2;
-    cout << "t1 + t2 = ";
-    t3.print();
+    Time resultTime = startTime + duration;
+    cout << "Start time + Duration = ";
+    resultTime.print();
 
-    ++t1;
-    cout << "t1 після ++ : ";
-    t1.print();
+    ++startTime;
+    cout << "Start time after ++ : ";
+    startTime.print();
 
-    if (t1 > t2) {
-        cout << "t1 більше t2" << endl;
+    if (startTime > duration) {
+        cout << "Start time більше Duration" << endl;
     } else {
-        cout << "t1 менше або дорівнює t2" << endl;
+        cout << "Start time менше або дорівнює Duration" << endl;
     }
 
     return 0;
