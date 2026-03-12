@@ -1,5 +1,7 @@
 #include <iostream>
 
+using namespace std;
+
 template <typename T>
 struct Node {
     T data;
@@ -41,10 +43,10 @@ public:
     void printAll() const {
         Node<T>* temp = head;
         while (temp) {
-            std::cout << temp->data << " ";
+            cout << temp->data << " ";
             temp = temp->next;
         }
-        std::cout << std::endl;
+        cout << std::endl;
     }
 
     bool isEmpty() const { return head == nullptr; }
@@ -60,7 +62,7 @@ public:
     Point() : x(0), y(0) {}
     Point(double x, double y) : x(x), y(y) {}
 
-    friend std::ostream& operator<<(std::ostream& os, const Point& p) {
+    friend ostream& operator<<(ostream& os, const Point& p) {
         os << "(" << p.x << ", " << p.y << ")";
         return os;
     }
@@ -92,7 +94,7 @@ public:
     }
 
     void Print() const {
-        std::cout << "Vector (size " << size << "): ";
+        cout << "Vector (size " << size << "): ";
         points.printAll();
     }
 };
@@ -107,7 +109,7 @@ int main() {
     myVector.Print();
 
     myVector.removeFirst();
-    std::cout << "After removing first element:" << std::endl;
+    cout << "After removing first element:" << endl;
     myVector.Print();
 
     return 0;
